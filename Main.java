@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
-import controller.*;
+import controller.ControleCategorias;
+import controller.ControleRotulos;
+import controller.ControleTarefas;
+
 public class Main {
     public static void main(String[] args) {
         try {
@@ -8,12 +11,11 @@ public class Main {
             Scanner console = new Scanner(System.in);
 
             do {
-                System.out.println("\nPUCTASK 1.0");
+                System.out.println("PUCTASK 1.0");
                 System.out.println("-----------");
                 System.out.println("1) Tarefas");
                 System.out.println("2) Categorias");
                 System.out.println("3) Rótulos");
-                System.out.println("4) Backup");
                 System.out.println("0) Sair");
 
                 System.out.print("Opção: ");
@@ -31,10 +33,6 @@ public class Main {
                     case 3:
                         ControleRotulos controleRotulos = new ControleRotulos(controleTarefas);
                         controleRotulos.iniciar();
-                        break;
-                    case 4:
-                        ControleBackups controleBackups = new ControleBackups();
-                        controleBackups.iniciar();
                         break;
                     case 0:
                         System.out.println("Saindo...");
